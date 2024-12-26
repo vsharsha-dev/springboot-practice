@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -15,11 +16,9 @@ public class HomeController {
     }
 
     @RequestMapping("/add")
-    public String add(HttpServletRequest req, HttpSession session) {
-        int num1 = Integer.parseInt(req.getParameter("num1"));
-        int num2 = Integer.parseInt(req.getParameter("num2"));
+    public String add(@RequestParam("num1") int number1, @RequestParam("num2") int number2, HttpSession session) {
 
-        int result = num1+num2;
+        int result = number1+number2;
 
         // This session can be accessed directly in result.jsp
         session.setAttribute("result", result);
