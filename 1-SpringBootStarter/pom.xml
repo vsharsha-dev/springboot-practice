@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.harshaspring</groupId>
-	<artifactId>SpringBootStarter</artifactId>
+	<artifactId>1-SpringBootStarter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootStarter</name>
+	<name>1-SpringBootStarter</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

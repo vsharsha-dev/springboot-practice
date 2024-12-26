@@ -1,7 +1,6 @@
-package com.harshaspring.SpringBootStarter;
+package com.harshaspring.SpringBootStarter.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

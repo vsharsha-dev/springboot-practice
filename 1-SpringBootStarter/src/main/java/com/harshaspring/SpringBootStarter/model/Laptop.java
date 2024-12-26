@@ -1,4 +1,4 @@
-package com.harshaspring.SpringBootStarter;
+package com.harshaspring.SpringBootStarter.model;
 
 import org.springframework.stereotype.Component;
 
