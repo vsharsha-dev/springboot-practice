@@ -3,7 +3,6 @@ package com.springpractice.SpringBootRest;
 import com.springpractice.SpringBootRest.model.JobPost;
 import com.springpractice.SpringBootRest.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,13 +20,13 @@ public class JobRestController {
     }
 
     @GetMapping("jobPost/{postId}")
-    public JobPost getJob(@PathVariable("postId") int postId){
-        return service.getJob(postId);
+    public JobPost getJob(@PathVariable("postId") int id){
+        return service.getJob(id);
     }
 
     @PostMapping("jobPost")
     public JobPost addJob(@RequestBody JobPost jobPost){
-        service.addJobPost(jobPost);
+        service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
     }
 
@@ -38,8 +37,9 @@ public class JobRestController {
     }
 
     @DeleteMapping("jobPost/{postId}")
-    public String deleteJob(@PathVariable("postId") int postId){
+    public String deleteJob(@PathVariable int postId){
         service.deleteJob(postId);
-        return "Job deleted";
+        return "Job Deleted";
     }
+
 }

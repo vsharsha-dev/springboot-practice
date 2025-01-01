@@ -11,24 +11,22 @@ import java.util.List;
 public class JobService {
 	@Autowired
 	public JobRepo repo;
-	
-	
-	
+
 	//method to return all JobPosts
 	public List<JobPost> getAllJobs() {
 		return repo.returnAllJobPosts();
+
 	}
-	
+
 	// method to add a jobPost
-	public void addJobPost(JobPost jobPost) {
-		 repo.addJobPost(jobPost);
+	public void addJob(JobPost jobPost) {
+		 repo.addJob(jobPost);
 	
 	}
 
-
-    public JobPost getJob(int i) {
-		return repo.getJob(i);
-    }
+	public JobPost getJob(int jobId) {
+		return repo.getJob(jobId);
+	}
 
 	public void updateJob(JobPost jobPost) {
 		repo.updateJob(jobPost);
