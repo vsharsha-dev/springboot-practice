@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class JobRestController {
 
     @Autowired
@@ -22,6 +23,11 @@ public class JobRestController {
     @GetMapping("jobPost/{postId}")
     public JobPost getJob(@PathVariable("postId") int id){
         return service.getJob(id);
+    }
+
+    @GetMapping("jobPosts/keyword/{keyword}")
+    public List<JobPost> searchByKeyword(@PathVariable("keyword") String keyword){
+        return service.search(keyword);
     }
 
     @PostMapping("jobPost")
